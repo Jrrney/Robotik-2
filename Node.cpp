@@ -1,8 +1,11 @@
-#include "Node.h"
-#include <iostream>
-#include <sstream>
+/// @file Node.cpp
+/// @brief contains the implementation of the Node class
+/// @author Jenny Dietrich
+/// @date 2023-04-05
+/// @version 1.0
 
-// #define DEBUG
+#include "Node.h"
+
 #ifdef DEBUG
 #define DEBUG_MSG(x) cout << x << endl;
 #else
@@ -14,7 +17,7 @@ int Node::nodeId_ = 0;
 Node::Node(const string &name) : name_(name)
 {
     nodeId_++;
-    if (name_ == "")
+    if (name_.empty())
     {
         stringstream ss;
         ss << nodeId_;
