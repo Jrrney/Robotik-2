@@ -89,6 +89,12 @@ public:
     ///
     void print(ostream &str, int indent = 0) const;
 
+    ///
+    /// @brief overload of the << operator to print the node and its children to the given stream
+    /// @param str the stream to print to
+    /// @param node the node to print
+    /// @return the stream
+    ///
     friend ostream &operator<<(ostream &os, Node &node);
 };
 
